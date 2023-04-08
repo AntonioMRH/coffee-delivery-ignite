@@ -7,7 +7,7 @@ interface AddressInterface extends AddressType {
 
 export interface CoffeeItem {
   name: string
-  source: string
+  source: any
   amount: number
   price: number
 }

@@ -1,4 +1,4 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import {
   Badge,
   BadgesContainer,
@@ -6,32 +6,32 @@ import {
   CardFooter,
   CartButton,
   QuantitySelectorContainer,
-} from './CoffeCard.styles'
-import { defaultTheme } from '../../../styles/themes/default'
-import { useContext, useState } from 'react'
-import { CoffeeCtx } from '../../../contexts/CoffeeCtx'
+} from "./CoffeCard.styles";
+import { defaultTheme } from "../../../styles/themes/default";
+import { useContext, useState } from "react";
+import { CoffeeCtx } from "../../../contexts/CoffeeCtx";
 
 type CoffeeCardProps = {
-  name: string
-  description: string
-  tags: string[]
-  source: string
-  key?: string
-}
+  name: string;
+  description: string;
+  tags: string[];
+  source: string;
+  key?: string;
+};
 
 const CoffeeCard = (props: CoffeeCardProps) => {
-  const [quantity, setQuantity] = useState(1)
-  const { updateCoffeeList } = useContext(CoffeeCtx)
+  const [quantity, setQuantity] = useState(1);
+  const { updateCoffeeList } = useContext(CoffeeCtx);
 
   const handleBtnPlusOne = () => {
-    setQuantity((state) => state + 1)
-  }
+    setQuantity((state) => state + 1);
+  };
 
   const handleBtnMinusOne = () => {
     if (quantity > 1) {
-      setQuantity((state) => state - 1)
+      setQuantity((state) => state - 1);
     }
-  }
+  };
 
   const handleAddToCart = () => {
     const selectedItem = {
@@ -39,17 +39,17 @@ const CoffeeCard = (props: CoffeeCardProps) => {
       source: props.source,
       amount: quantity,
       price: 9.9 * quantity,
-    }
-    updateCoffeeList(selectedItem)
-    setQuantity(1)
-  }
+    };
+    updateCoffeeList(selectedItem);
+    setQuantity(1);
+  };
 
   return (
     <CardContainer>
       <img src={props.source} alt={props.name} />
       <BadgesContainer>
         {props.tags.map((tag) => {
-          return <Badge key={props.tags.indexOf(tag)}>{tag}</Badge>
+          return <Badge key={props.tags.indexOf(tag)}>{tag}</Badge>;
         })}
       </BadgesContainer>
       <h5>{props.name}</h5>
@@ -73,7 +73,7 @@ const CoffeeCard = (props: CoffeeCardProps) => {
         </CartButton>
       </CardFooter>
     </CardContainer>
-  )
-}
+  );
+};
 
-export default CoffeeCard
+export default CoffeeCard;

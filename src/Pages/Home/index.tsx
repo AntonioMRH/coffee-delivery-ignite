@@ -1,13 +1,14 @@
 import { CardsContainer, MainSection } from './Home.styles'
 import Banner from './components/Banner'
 import CoffeeCard from './components/CoffeeCard'
+import Expresso from '../../assets/Expresso.svg'
 
 const coffeeList = [
   {
     name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     tags: ['tradicional'],
-    source: 'src/assets/Expresso.svg',
+    source: Expresso,
   },
   {
     name: 'Expresso Americano',
