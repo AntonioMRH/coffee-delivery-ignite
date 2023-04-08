@@ -9,6 +9,7 @@ import {
 import { defaultTheme } from '../../styles/themes/default'
 import { useContext } from 'react'
 import { CoffeeCtx } from '../../contexts/CoffeeCtx'
+import SuccessIllustration from '../../assets/Illustration.svg'
 
 export function SuccessPage() {
   const { userAddress } = useContext(CoffeeCtx)
@@ -65,7 +66,7 @@ export function SuccessPage() {
           </SuccessItem>
         </LeftContainer>
         <img
-          src="src/assets/illustration.svg"
+          src={SuccessIllustration}
           alt="Homem entregando pedido em uma motocicleta"
         />
       </ContentContainer>
