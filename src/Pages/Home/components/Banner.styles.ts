@@ -11,7 +11,7 @@ export const BannerContainer = styled.article`
   padding: 92px 160px;
 
   background-color: ${(props) => props.theme.background};
-  background-image: url('src/assets/background.svg');
+  background-image: url('/Background.svg');
 `
 export const BannerLeftContainer = styled.section`
   width: 100%;

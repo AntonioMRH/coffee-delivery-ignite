@@ -7,6 +7,7 @@ import {
   ItemsList,
 } from './Banner.styles'
 import { Coffee, Package, Timer, ShoppingCart } from 'phosphor-react'
+import FrontBanner from '../../../assets/coffeefrontpage.svg'
 
 const Banner = () => {
   return (
@@ -63,7 +64,7 @@ const Banner = () => {
         </ItemsList>
       </BannerLeftContainer>
       <BannerRightContainer>
-        <img src="src/assets/coffeefrontpage.svg" alt="Copo de cafe " />
+        <img src={FrontBanner} alt="Copo de cafe " />
       </BannerRightContainer>
     </BannerContainer>
   )

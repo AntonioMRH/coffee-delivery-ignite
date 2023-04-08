@@ -10,6 +10,7 @@ import { defaultTheme } from '../styles/themes/default'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { CoffeeCtx } from '../contexts/CoffeeCtx'
+import CafeLogo from '../assets/coffeelogo.svg'
 
 export function Header() {
   const navigate = useNavigate()
@@ -18,7 +19,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <LogoContainer onClick={() => navigate('/')}>
-        <img src="src/assets/coffeelogo.svg" alt="Logo" />
+        <img src={CafeLogo} alt="Logo" />
       </LogoContainer>
 
       <InfoContainer>
